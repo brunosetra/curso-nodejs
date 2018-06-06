@@ -2,12 +2,15 @@ var express = require('express')
 
 var app = express()
 
+app.set('view engine', 'ejs')
+
 app.get('/', (req,res)=> {
     res.send('<html><body>Portal de Noticias</body></html>')
+    
 })
 
 app.get('/tecnologia', (req,res)=> {
-    res.send('<html><body>Portal de Noticias Tecnologia</body></html>')
+    res.render('secao/tecnologia')
 })
 
 app.get('/moda', (req,res)=> {
